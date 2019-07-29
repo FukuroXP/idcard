@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Cetak;
 use App\Frame;
 use App\Pegawai;
+use DemeterChain\C;
 use FontLib\Table\Type\post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -35,8 +36,8 @@ class CetakController extends Controller
             'pegawai_id'=>$data['pegawai_id'],
             'foto'=>$fotoPath,
         ]);
-
-//        redirect('/cetak/{cetak}');
+//dd($data->id);
+        return redirect('/cetak/'.$data->id);
     }
 
     public function view(\App\Cetak $cetak, Frame $frame, Pegawai $pegawai)
@@ -66,11 +67,11 @@ foreach ($frame as $frame);
             ->join('frames', 'cetaks.frame_id', '=', 'frames.id')
             ->join('pegawais', 'cetaks.pegawai_id', '=', 'pegawais.id')
             ->select('cetaks.*', 'frames.*', 'pegawais.*')
-            ->where('cetaks.id', '=',$cetak->frame_id)
+            ->where('cetaks.id', '=',$cetak->id)
             ->get();
 
         foreach ($frame as $frame);
-
+//dd($cetak);
         set_time_limit(300);
         $pdf = \PDF::loadView('cetak.view', compact('cetak','frame','pegawai', $frame));
         $pdf->setPaper('A4', 'landscape');
