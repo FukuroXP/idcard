@@ -18,10 +18,15 @@
 
 </style>
 
-<table style="background: {{ $frame->background }}; height: 250px; width: 158px; table-layout: fixed; transform: scale(-1, 1);">
+<table
+    style="background: {{ $frame->background }};
+        height: 250px;
+        width: 158px;
+        table-layout: fixed;
+        transform: scale(-1, 1);">
     <tr>
         <td colspan="18" height="57px" align="center">
-            <img src="..\public\storage\{{ $frame->logo }}" style="max-width: 40px">
+            <img src="..\public\storage\{{ $frame->logo }}" style="max-width: 40px" alt="LOGO">
         </td>
     </tr>
     <tr>
