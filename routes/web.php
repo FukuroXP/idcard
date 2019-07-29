@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/cetak/{cetak}', 'CetakController@view');
+
 
 Route::get('/new_frame', 'FramesController@create');
 Route::post('/framego', 'FramesController@store');
@@ -26,7 +26,7 @@ Route::get('/view/{frame}', 'FramesController@view');
 Route::get('/home', 'HomeController@index')->name('home.view');
 
 Route::post('/cetakgo', 'CetakController@store');
-
+Route::get('/cetak/{cetak}', 'CetakController@view');
 
 
 Route::get('barcode', 'HomeController@barcode');
