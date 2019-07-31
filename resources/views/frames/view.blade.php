@@ -97,7 +97,7 @@
                     </tr>
                     <tr>
                         <td align="center" colspan="3">
-                            <b style="font-size: 9px">NIP. {{ $frame->nip }}</b>
+                            <b style="font-size: 9px">NIP. {{ $frame->nip_frame }}</b>
                         </td>
                     </tr>
                     <tr>
@@ -110,34 +110,32 @@
 
     </div>
 
-    <div class="row">
-        <div class="col-12 pl-5">
+    <div class="col-12">
+        <div class=" pl-2">
             <form enctype="multipart/form-data" action="/cetakgo" method="post">
                 @csrf
-                <div class="card">
-                    <div class="col-12">
-                        <div class="form-group">
-                            <input name="frame_id" value="{{ $frame->id }}" hidden>
-                        </div>
+                <div class="card col-12">
+                    <div class="form-group">
+                        <input name="frame_id" value="{{ $frame->id }}" hidden>
+                    </div>
 
-                        <div class="form-group">
-                            <label>Pilih Pegawai</label>
-                            <select name="pegawai_id" class="form-control">
-                                <option>Pilih</option>
-                                @foreach($pegawais as $pegawai)
-                                    <option value="{{ $pegawai->id }}">{{ $pegawai->nama }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <label>Pilih Pegawai</label>
+                        <select name="pegawai_id" class="form-control">
+                            <option>Pilih</option>
+                            @foreach($pegawais as $pegawai)
+                                <option value="{{ $pegawai->id }}">{{ $pegawai->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
-                        <div class="form-group">
-                            <label>Foto : </label>
-                            <input type="file" class="form-control-file" name="foto">
-                        </div>
+                    <div class="form-group">
+                        <label>Foto : </label>
+                        <input type="file" class="form-control-file" name="foto">
+                    </div>
 
-                        <div class="form-group">
-                            <button class="btn btn-primary" type="submit">Simpan</button>
-                        </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Simpan</button>
                     </div>
                 </div>
             </form>
