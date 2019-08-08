@@ -17,6 +17,11 @@
                         </div>
 
                         <div class="form-group">
+                            <label>Insatansi : </label>
+                            <input type="text" class="form-control" name="instansi">
+                        </div>
+
+                        <div class="form-group">
                             <label>Daerah : </label>
                             <input type="text" class="form-control" name="daerah">
                         </div>
@@ -32,8 +37,23 @@
                         </div>
 
                         <div class="form-group">
+                            <label>Diwakilkan Oleh : </label>
+                            <input type="text" class="form-control" name="perwakilan">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nama Yang Bertandatangan : </label>
+                            <input type="text" class="form-control" name="nama_ttd">
+                        </div>
+
+                        <div class="form-group">
                             <label>NIP : </label>
                             <input type="text" class="form-control" name="nip_frame">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Satuan Kerja : </label>
+                            <input type="text" class="form-control" name="satuan_kerja">
                         </div>
 
                         <div class="form-group">
