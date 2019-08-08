@@ -17,10 +17,14 @@ class CreateFramesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('judul');
+            $table->string('instansi');
             $table->string('daerah');
             $table->string('masa_berlaku');
             $table->string('atas_nama');
+            $table->string('perwakilan')->nullable();
+            $table->string('nama_ttd');
             $table->string('nip_frame');
+            $table->string('satuan_kerja');
             $table->string('background');
             $table->string('logo');
             $table->string('ttd');
