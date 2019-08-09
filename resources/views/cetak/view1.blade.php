@@ -117,7 +117,7 @@
         </div>
     </div>
     <div class="row col-6 pt-3">
-        <a class="btn btn-primary" href="/print/{{ $cetak->id }}">Print</a>
+        <a class="btn btn-primary" href="/print/{{ $cetak->id }}"><i class="fa fa-print"></i> Print</a>
     </div>
 </div>
 @endsection
