@@ -21,7 +21,7 @@
     <div class="container">
         <h4>Pilih Frame</h4>
         <div class="pb-5 float-right">
-            <a href="/new_frame" class="btn btn-primary">Tambah Frame</a>
+            <a href="/new_frame" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Frame</a>
         </div>
         <div class="container d-flex">
             <div class="row">
@@ -120,7 +120,11 @@
                             </div>
                         </div>
                     </a>
-                    <div class="pb-5"></div>
+
+                    <div class="pr-2">
+                        {{--                        <div class="pb-2"><a href="edit" class="btn btn-outline-primary"><i class="fa fa-edit"></i> </a></div>--}}
+                        {{--                        <div><a href="delete" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a></div>--}}
+                    </div>
                 @endforeach
             </div>
         </div>

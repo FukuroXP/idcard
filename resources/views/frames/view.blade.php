@@ -135,7 +135,8 @@
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-primary" type="submit">Simpan</button>
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-check"></i> Simpan</button>
+                        <a href="/home" class="btn btn-danger"><i class="fa fa-times"></i> Batal</a>
                     </div>
                 </div>
             </form>
