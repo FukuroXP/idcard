@@ -25,10 +25,14 @@ class FramesController extends Controller
     {
         $data = request()->validate([
             'judul'=>'required',
+            'instansi' => 'required',
             'daerah'=>'required',
             'masa_berlaku'=>'required',
             'atas_nama'=>'required',
+            'perwakilan' => 'nullable',
+            'nama_ttd' => 'required',
             'nip_frame'=>'required',
+            'satuan_kerja' => 'required',
             'background'=>'required',
             'logo'=>['required','image'],
             'ttd'=>['required','image'],
@@ -49,10 +53,14 @@ class FramesController extends Controller
 
         auth()->user()->frames()->create([
             'judul' => $data['judul'],
+            'instansi' => $data['instansi'],
             'daerah' => $data['daerah'],
             'masa_berlaku' => $data['masa_berlaku'],
             'atas_nama' => $data['atas_nama'],
+            'perwakilan' => $data['perwakilan'],
+            'nama_ttd' => $data['nama_ttd'],
             'nip_frame' => $data['nip_frame'],
+            'satuan_kerja' => $data['satuan_kerja'],
             'background' => $data['background'],
             'logo' => $logoPath,
             'ttd' => $ttdPath,
