@@ -3,15 +3,15 @@
     .ttd
     {
         position:absolute;
-        top: 430px;
+        top: 420px;
         left: 50px;
         z-index: 1;
     }
     .stampel
     {
         position:absolute;
-        top: 410px;
-        left: 20px;
+        top: 405px;
+        left: 15px;
         z-index: 2;
     }
 
@@ -33,7 +33,7 @@
                         </tr>
                         <tr>
                             <td colspan="5" height="12px" align="center">
-                                <span><b style="font-size: 9px">PEMERINTAH KABUPATEN</b></span>
+                                <span><b style="font-size: 9px">{{ $frame->instansi }}</b></span>
                             </td>
                         </tr>
                         <tr>
@@ -52,7 +52,7 @@
                         </tr>
                         <tr>
                             <td colspan="5" align="center" height="35px">
-                                <span><b style="font-size: 9px">{{ $frame->nama }}</b></span>
+                                <b style="font-size: 12px">{{ $frame->nama }}</b><br>
                                 <span><b style="font-size: 9px">{{ $frame->nip }}</b></span>
                             </td>
                         </tr>
@@ -87,8 +87,8 @@
                         </tr>
                         <tr>
                             <td align="center" colspan="3" height="25px">
-                                <b style="font-size: 12px">a.n BUPATI {{ $frame->daerah }}</b>
-                                </br><b style="font-size: 9px">Sekertaris Daerah</b></td>
+                                <b style="font-size: 12px">a.n {{ $frame->atas_nama }} {{ $frame->daerah }}</b>
+                                </br><b style="font-size: 9px">{{ $frame->perwakilan }}</b></td>
                         </tr>
                         <tr>
                             <td colspan="3" height="30px">
@@ -98,8 +98,8 @@
                         </tr>
                         <tr>
                             <td align="center" colspan="3" height="10px">
-                                <u><b style="font-size: 12px">{{ $frame->atas_nama }}</b></u>
-                                <br><b style="font-size: 8px">Pembina Utama Madya</b>
+                                <u><b style="font-size: 12px">{{ $frame->nama_ttd }}</b></u>
+                                <br><b style="font-size: 8px">{{ $frame->satuan_kerja }}</b>
                             </td>
                         </tr>
                         <tr>
